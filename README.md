@@ -1,23 +1,32 @@
 # PySpark-BigData
-O projeto foi desenvolvido consolidando as bases disponibilizadas em uma única por meio do processo de ETL, utilizando como ferramentas o Colab bem como o Google Cloud e observando os seguintes parâmetros:
+Resumo do Projeto
+O projeto visou consolidar bases de dados distintas em uma única base por meio do processo de ETL, utilizando ferramentas como Google Colab e Google Cloud. Foram observados os seguintes parâmetros:
 
-Da base de dados:
-Os dados disponibilizados são da base dos dados de CAT do ano de 2022 contendo os dados cadastrados no sistema informatizado de Comunicação de Acidentes do Trabalho do INSS (CATWEB) ou quando da concessão de benefício por incapacidade acidentário. Por tais dados serem efetuados por sistema, telefone e ou presencial podem existir dados divergentes ou ausentes(faltantes).
+Base de Dados:
+Os dados utilizados são referentes às Comunicações de Acidentes de Trabalho (CAT) do INSS para o ano de 2022, obtidos do sistema informatizado CATWEB. Estes dados podem apresentar divergências ou ausências, pois são registrados por sistema, telefone ou presencialmente.
+
 Nível Infra:
-O arquivo original e tratado deve ser salvo em MongoDB Atlas em coleções diferentes (enumerar com o final tratado ou original). Os Datasets devem ser obrigatoriamente salvos em uma bucket do CloudStorage(original e tratado). Disponibilizar o dataset final em um mysql. COMENTÁRIOS
-Nível Pandas
-Realizar a extração correta para um dataframe.
-Verificar a existência de dados inconsistentes e realizar a limpeza para NaN/NA ou algum valor atribuído por você explicando o porque da decisão.
-Realizar o drop(se necessário) de colunas do dataframe realizando o comentário do porque da exclusão
-Todos os passos devem ser comentados(exclusivos)
-Agregar todos os DF's originais em um unico DF tratado
-Criar no mínimo 3 insights dos dados apresentados podendo ser construído com auxilio de plots.
-Nivel PySpark
-Deverá ser montada a estrutura do DataFrame utilizando o StructType.
-Verificar a existência de dados inconsistentes, nulos e realizar a limpeza.
-Verificar a necessidade de drop em colunas ou linhas. Caso seja necessário, fazer comentário do porque.
-Realizar a mudança de nome de pelo menos 2 colunas
-Deverá criar pelo menos duas novas colunas contendo alguma informação relevante sobre as outras colunas já existentes (Funções de Agrupamento, Agregação ou Joins). (Use a sua capacidade analítica)
-Deverá utilizar filtros, ordenação e agrupamento, trazendo dados relevantes para o negócio em questão. (Use a sua capacidade analítica)
-Utilizar pelo menos duas Window Functions
-5 insights utilizando SparkSQL
+
+O arquivo original e o tratado devem ser salvos em coleções diferentes no MongoDB Atlas.
+Os datasets devem ser armazenados em um bucket do CloudStorage (tanto o original quanto o tratado).
+O dataset final deve ser disponibilizado em um banco de dados MySQL.
+Comentários:
+
+Nível Pandas:
+
+Extrair corretamente os dados para um dataframe.
+Identificar e corrigir dados inconsistentes, substituindo valores ausentes por NaN/NA ou outro valor justificado.
+Excluir colunas desnecessárias, explicando a razão da exclusão.
+Comentar todos os passos realizados.
+Agregar todos os dataframes originais em um único dataframe tratado.
+Criar no mínimo três insights dos dados, podendo utilizar visualizações.
+Nível PySpark:
+
+Estruturar o dataframe usando StructType.
+Identificar e limpar dados inconsistentes ou nulos.
+Avaliar a necessidade de excluir colunas ou linhas, justificando a exclusão.
+Renomear pelo menos duas colunas.
+Criar pelo menos duas novas colunas relevantes a partir das existentes (utilizando agrupamento, agregação ou joins).
+Utilizar filtros, ordenação e agrupamento para extrair dados relevantes.
+Utilizar pelo menos duas Window Functions.
+Desenvolver cinco insights utilizando SparkSQL.
